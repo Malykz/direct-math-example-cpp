@@ -15,6 +15,7 @@
 | `exponentiation` | `int, int` | `int` | Calculates the exponentiation of a base and an exponent.|
 | `generate_primes` | `int` | `list<int>` | Generates a list of prime numbers up to a given number.|
 | `is_prime` | `int` | `bool` | Checks if a number is prime.|
+| `range` | `int, int` | `vector <int>` | Generate vector element from `s` to `n`|
 
 ## How To Use
 ### Quick Test

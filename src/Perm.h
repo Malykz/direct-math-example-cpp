@@ -33,6 +33,15 @@ public:
         return res;
     }        
 
+    static vector <int> range(
+        int n,
+        int s = 0
+    ) {
+        vector <int> result;
+        for (int i = s; i <= n; i++) result.push_back(i);
+        return result;        
+    }
+
     static int combination(int n, int r)
     {
         if (r == n) return 1;

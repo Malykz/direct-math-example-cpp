@@ -6,10 +6,10 @@
 |----------------|----------------|----------------|---------------------------------|
 | `fpb`         | `vector<int>`      | `int`          | Calculates the greatest common divisor (GCD) of a vector of integers         |
 | `gcd`         | `int, int`      | `int`          | Calculates the greatest common divisor (GCD) of two integers.         |
-| `permutation`       | `int, int`      | `int`          | Calculates the permutation of n and r       |
-| `perm_gen`  | `vector<int>`           | `vector <vector <int>>`         | Generates all permutations of a
-| `combination`         | `int, int`      | `int`          | Calculates the combination of n and r|
-| `combination_gen` | `int` | `int` | Generates the number of combinations for a given n|
+| `permutation`       | `int, int`      | `int`          | Calculates the permutation of `n` and `r`       |
+| `perm_gen`  | `vector<int>`           | `vector <vector <int>>`         | Generates all permutations of an ellements |
+| `combination`         | `int, int`      | `int`          | Calculates the combination of `n` and `r`|
+| `combination_gen` | `int` | `int` | Generates the number of combinations for a given `n`|
 | `factorial` | `int` | `int` | Calculates the factorial of a number|
 | `timeli` | `vector<int>` | `int` | Multiplies all elements in a vector.|
 | `exponentiation` | `int, int` | `int` | Calculates the exponentiation of a base and an exponent.|
@@ -27,7 +27,7 @@ cd direct-math-example-cpp
 ### Or write it Dirrectly
 ```c++
 #include <iostream>
-#include "math/Math.h"
+#include "src/Math.h"
 
 int main() {
     cout << DirectMath::exponentiation(2, 3); // 8

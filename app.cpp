@@ -2,7 +2,10 @@
 #include "src/Math.h"
 
 int main() {
-    cout << DirectMath::exponentiation(2, 3); // 8
-    cout << DirectMath::is_prime(2); // 0
+    for (vector <int> a : DirectMath::perm_gen({1, 2, 3}))
+    {
+        for (int b : a) cout << b;
+        cout << endl;
+    }
     return 0;
 }

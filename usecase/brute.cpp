@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include <string>
 #include <algorithm>
+#include <optional>
 #include "../src/Math.h"
 #include <map>
 
@@ -9,32 +9,36 @@ using namespace std;
 
 map <int, vector <int>> fien(
     vector <int> angka,
+    size_t len,
     map <int, vector <int>> result = {}
 ) {
     vector <int> rem;
-    for (int i : angka)
+    for (size_t i = 0; i < angka.size(); i++)
     {
         rem = angka;
-        rem.erase(remove(rem.begin(), rem.end(), i), rem.end());
+        rem.erase(rem.begin() + i);
         result[DirectMath::timeli(rem)] = rem;
 
-        if (rem.size() > 2) {
-            result = fien(rem, result);
+        if (rem.size() > len) {
+            result = fien(rem, len, result);
         }
     }
 
     return result;
 }   
 
-vector <int> to_brute(int target, vector <int> sek)
+optional <vector <int>> to_brute(int target, vector <int> sek, size_t len)
 {
-    map <int, vector <int>> super = fien(sek);
+    map <int, vector <int>> super = fien(sek, len);
+    if(super[target].size() != len) return nullopt;
     return super[target];
 }
 
-int main (int argc, char* argv[]) {
-    int val = std::stoi(argv[1]);
-    for (int super : to_brute(val, {3, 5, 2, 67, 42})) cout << super;
+int main () {
+
+    vector <int> maven = {1, 2, 3, 4, 5};
+    auto brute = to_brute(6, maven, 2);
+    if (brute) for (int a : brute.value()) cout << a;
 
     return 0;
 }

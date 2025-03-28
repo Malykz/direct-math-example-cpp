@@ -23,7 +23,6 @@ map <int, vector <int>> fien(
             result = fien(rem, len, result);
         }
     }
-
     return result;
 }   
 
@@ -35,10 +34,6 @@ optional <vector <int>> to_brute(int target, vector <int> sek, size_t len)
 }
 
 int main () {
-
-    vector <int> maven = {1, 2, 3, 4, 5};
-    auto brute = to_brute(6, maven, 2);
-    if (brute) for (int a : brute.value()) cout << a;
-
+    auto bsd = to_brute(12, {6, 2, 3, 5}, 2);
     return 0;
 }

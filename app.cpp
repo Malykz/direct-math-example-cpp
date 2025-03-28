@@ -30,14 +30,14 @@ map <int, vector <int>> super(
         rem.erase(rem.begin() + asd);
         result[timeli(rem)] = rem;
 
-        if (rem.size() > len) {
-            result = super(rem, len, result);
-        }
+        if (rem.size() > len) result = super(rem, len, result);
     }
 
     return result;
     
 }
+
+static string letters = "abcdefghijklmnopqrstuvwxyz";
 
 optional <vector <int>> brute(int target, vector <int> maven, size_t len)
 {
@@ -47,9 +47,7 @@ optional <vector <int>> brute(int target, vector <int> maven, size_t len)
 }
 
 int main() {
-    vector <int> mvn = {1, 2, 3, 4, 5};
-    auto asd = brute(6, mvn, 2);
-    if (asd) for (int a : asd.value()) cout << a;
-    
+    long int per = DirectMath::combination(12, 4);
+    cout << per;
     return 0;
 }

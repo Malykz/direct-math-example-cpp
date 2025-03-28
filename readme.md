@@ -6,7 +6,7 @@
 |----------------|----------------|----------------|---------------------------------|
 | `fpb`         | `vector<int>`      | `int`          | Calculates the greatest common divisor (GCD) of a vector of integers         |
 | `gcd`         | `int, int`      | `int`          | Calculates the greatest common divisor (GCD) of two integers.         |
-| `permutation`       | `int, int`      | `int`          | Calculates the permutation of `n` and `r`       |
+| `permutation`       | `int, int`      | `long int`          | Calculates the permutation of `n` and `r`       |
 | `perm_gen`  | `vector<int>`           | `vector <vector <int>>`         | Generates all permutations of an ellements |
 | `combination`         | `int, int`      | `int`          | Calculates the combination of `n` and `r`|
 | `combination_gen` | `int` | `int` | Generates the number of combinations for a given `n`|

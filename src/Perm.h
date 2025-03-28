@@ -11,14 +11,14 @@ using namespace std;
 
 class Perm : public Times {
 public:
-    static int permutation(int n, int r)
+    static long int permutation(int n, int r)
     {
-        if (r == n) return 1;
+        long int permutasi = 1;
 
-        int na = factorial(n);
-        int ra = factorial(n - r);
+        for(int i = 0; i < r; i++)
+            permutasi *= (n - 1);
 
-        return na / ra;
+        return permutasi;            
     }
 
     static vector <vector <int>> perm_gen(vector <int> angka)
